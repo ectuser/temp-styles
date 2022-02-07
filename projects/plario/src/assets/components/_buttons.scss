@@ -1,0 +1,84 @@
+// confirm button
+.mat-confirm {
+  color: white !important;
+  background-color: $plar-green !important;
+}
+// disabled buttons
+.mat-raised-button.mat-button-disabled,
+.mat-flat-button.mat-button-disabled {
+  background-color: $plar-gray-1 !important;
+  color: white !important;
+}
+.mat-button-disabled {
+  color: $plar-gray-1 !important;
+}
+
+.mat-button,
+.mat-raised-button,
+.mat-stroked-button,
+.mat-flat-button {
+  border-radius: 8px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+
+  &.round {
+    border-radius: 100px !important;
+  }
+}
+
+@mixin strokeBorder($color) {
+  &.mat-stroked-button {
+    border: 1px solid $color !important;
+  }
+}
+
+@mixin raisedBoxShadow($box-shadow) {
+  &.mat-raised-button {
+    box-shadow: $box-shadow !important;
+  }
+}
+
+@mixin useHoverColor($color) {
+  &.mat-button,
+  &.mat-stroked-button {
+    &:hover {
+      color: $color !important;
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+
+  &.mat-raised-button,
+  &.mat-flat-button {
+    &:hover {
+      background: $color !important;
+    }
+  }
+
+  &.mat-stroked-button {
+    &:hover {
+      border: 1px solid $color !important;
+    }
+  }
+
+  // todo - add box-shadow for mat-rised-button
+}
+
+.mat-primary {
+  @include useHoverColor(mat-color($plar-blue-palette, 300));
+  @include strokeBorder(mat-color($plar-blue-palette, 500));
+  @include raisedBoxShadow(0px 8px 12px rgba(74, 105, 255, 0.32));
+}
+.mat-accent {
+  @include useHoverColor(mat-color($plar-light-blue-palette, 300));
+  @include strokeBorder(mat-color($plar-light-blue-palette, 500));
+  @include raisedBoxShadow(0px 8px 12px rgba(30, 201, 232, 0.32));
+}
+.mat-warn {
+  @include useHoverColor(mat-color($plar-red-palette, 300));
+  @include strokeBorder(mat-color($plar-red-palette, 500));
+}
+.mat-confirm {
+  @include useHoverColor($plar-green-light);
+  @include raisedBoxShadow(0px 8px 12px rgba(0, 220, 125, 0.32));
+}

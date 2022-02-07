@@ -1,13 +1,10 @@
 {
   "name": "plario-packages",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lib:build": "ng build plario",
+    "lib:watch": "ng build plario --watch",
+    "demo": "ng serve demo"
   },
   "private": true,
   "dependencies": {
