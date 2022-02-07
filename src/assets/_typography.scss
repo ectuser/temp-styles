@@ -20,7 +20,7 @@ $my-custom-typography-config: mat-typography-config(
 	line-height: 24px;
 }
 
-body {
+div.theme-provider {
   color: $plar-text-gray;
   font-family: 'Avenir Next Cyr Regular', 'arial', sans-serif;
 	@include text;
