@@ -12,11 +12,6 @@
         }
     };
 
-    var rippleConfig = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        globalRippleConfig: globalRippleConfig
-    });
-
     /*
      * Public API Surface of plario
      */
@@ -25,7 +20,7 @@
      * Generated bundle index. Do not edit.
      */
 
-    exports.rippleConfig = rippleConfig;
+    exports.globalRippleConfig = globalRippleConfig;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

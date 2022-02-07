@@ -6,11 +6,6 @@ const globalRippleConfig = {
     }
 };
 
-var rippleConfig = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    globalRippleConfig: globalRippleConfig
-});
-
 /*
  * Public API Surface of plario
  */
@@ -19,5 +14,5 @@ var rippleConfig = /*#__PURE__*/Object.freeze({
  * Generated bundle index. Do not edit.
  */
 
-export { rippleConfig };
+export { globalRippleConfig };
 //# sourceMappingURL=plario.js.map
