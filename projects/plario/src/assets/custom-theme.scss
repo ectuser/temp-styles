@@ -1,0 +1,82 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$plar-blue: (
+    50: #8997FF,
+    100: #8997FF,
+    200: #8997FF,
+    300: #8997FF,
+    400: #657FFF,
+    500: #4A69FF,
+    600: #4A69FF,
+    700: #003FCB,
+    800: #003FCB,
+    900: #003FCB,
+    contrast: (
+        50: #FFFFFF,
+        100: #FFFFFF,
+        200: #FFFFFF,
+        300: #FFFFFF,
+        400: #FFFFFF,
+        500: #FFFFFF,
+        600: #FFFFFF,
+        700: #FFFFFF,
+        800: #FFFFFF,
+        900: #FFFFFF
+    )
+);
+
+$plar-light-blue: (
+    50: #5CE6FF,
+    100: #5CE6FF,
+    200: #5CE6FF,
+    300: #5CE6FF,
+    400: #5CE6FF,
+    500: #1EC9E8,
+    600: #1EC9E8,
+    700: #0098B6,
+    800: #0098B6,
+    900: #0098B6,
+    contrast: (
+        50: #FFFFFF,
+        100: #FFFFFF,
+        200: #FFFFFF,
+        300: #FFFFFF,
+        400: #FFFFFF,
+        500: #FFFFFF,
+        600: #FFFFFF,
+        700: #FFFFFF,
+        800: #FFFFFF,
+        900: #FFFFFF
+    )
+);
+
+$plar-green: (
+    50: #32F19F,
+    100: #32F19F,
+    200: #32F19F,
+    300: #32F19F,
+    500: #00DC7D,
+    600: #00DC7D,
+    700: #00A94F,
+    800: #00A94F,
+    900: #00A94F,
+    contrast: (
+        50: #FFFFFF,
+        100: #FFFFFF,
+        200: #FFFFFF,
+        300: #FFFFFF,
+        500: #FFFFFF,
+        600: #FFFFFF,
+        700: #FFFFFF,
+        800: #FFFFFF,
+        900: #FFFFFF
+    )
+);
+
+$primary: mat-palette($plar-blue, 500);
+$accent: mat-palette($plar-light-blue, 500);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);

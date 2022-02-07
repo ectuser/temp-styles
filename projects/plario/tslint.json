@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "plario",
+      "plar",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "plario",
+      "plar",
       "kebab-case"
     ]
   }

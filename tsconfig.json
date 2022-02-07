@@ -7,6 +7,10 @@
       "components": [
         "dist/components/components",
         "dist/components"
+      ],
+      "plario": [
+        "dist/plario/plario",
+        "dist/plario"
       ]
     },
     "outDir": "./dist/out-tsc",
