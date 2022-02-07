@@ -1,45 +1,22 @@
 {
-  "name": "plario-packages",
+  "name": "plario",
   "version": "0.0.1",
-  "scripts": {
-    "lib:build": "ng build plario",
-    "lib:watch": "ng build plario --watch",
-    "demo": "ng serve demo"
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14",
+    "@angular/material": "11.2.13"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "~11.2.11",
-    "@angular/cdk": "^11.2.13",
-    "@angular/common": "~11.2.11",
-    "@angular/compiler": "~11.2.11",
-    "@angular/core": "~11.2.11",
-    "@angular/forms": "~11.2.11",
-    "@angular/material": "^11.2.13",
-    "@angular/platform-browser": "~11.2.11",
-    "@angular/platform-browser-dynamic": "~11.2.11",
-    "@angular/router": "~11.2.11",
-    "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "tslib": "^2.0.0"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.18",
-    "@angular/cli": "~11.2.10",
-    "@angular/compiler-cli": "~11.2.11",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.1.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "ng-packagr": "^11.0.0",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.1.5"
+  "main": "bundles/plario.umd.js",
+  "module": "fesm2015/plario.js",
+  "es2015": "fesm2015/plario.js",
+  "esm2015": "esm2015/plario.js",
+  "fesm2015": "fesm2015/plario.js",
+  "typings": "plario.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
   }
 }
