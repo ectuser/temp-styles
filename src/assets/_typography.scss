@@ -11,8 +11,47 @@ $my-custom-typography-config: mat-typography-config(
   $caption: mat-typography-level(12px, 16px, 400)
 );
 
+.mat-small, .mat-caption {
+  letter-spacing: 0.4px;
+}
+
+@mixin text {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+body {
+  color: $plar-text-gray;
+  font-family: 'Avenir Next Cyr Regular', 'arial', sans-serif;
+	@include text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 96px;
+	line-height: 118px;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 74px;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 59px;
+}
+
 h4 {
-  letter-spacing: 0.25px;
+	font-weight: 400;
+	font-size: 34px;
+	line-height: 42px;
 }
 
 h5 {
@@ -25,11 +64,31 @@ h6 {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 28px;
-  letter-spacing: 0.15px;
 }
 
-.mat-small, .mat-caption {
-  letter-spacing: 0.4px;
+@mixin body-1 {
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.44px;
+}
+
+@mixin subtitle-2 {
+	font-weight: 750;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+@mixin button-text {
+	font-weight: 750;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+@mixin caption {
+	font-size: 12px;
+	line-height: 16px;
 }
 
 @mixin overline-bold {
@@ -52,18 +111,6 @@ h6 {
 	font-size: 8px;
 	line-height: 10px;
 	letter-spacing: 0.4px;
-}
-
-@mixin subtitle-2 {
-	font-weight: 750;
-	font-size: 14px;
-	line-height: 24px;
-}
-
-@mixin body-1 {
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.44px;
 }
 
 // $h5: mat-typography-level(24px, 29px, 400),
