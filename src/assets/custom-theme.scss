@@ -1,7 +1,8 @@
 @import "~@angular/material/theming";
 @import "variables";
+@import "typography";
 
-@include mat-core();
+@include mat-core($my-custom-typography-config);
 
 $primary: mat-palette($plar-blue-palette, 500);
 $accent: mat-palette($plar-light-blue-palette, 500);
